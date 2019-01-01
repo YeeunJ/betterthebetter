@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class winLottery {
 	private int lotto_com[] = new int[6]; 
 	private int lotto_user[] = new int[6]; 
-	private boolean same = true;
+	private int s_count = 0;
 	private int count = 0;
 	private int match_count = 0;
 	
@@ -24,6 +24,7 @@ public class winLottery {
 		//맞춘 갯수 출력
 		System.out.printf("일치하는 로또 번호는 %d개 입니다.\n", printSame());
 	}
+	
 	//computer로또번호 만들기
 	void c_input() {
 		count = 0;
@@ -33,18 +34,11 @@ public class winLottery {
 		while(count < lotto_com.length) {
 			//random으로 만들고
 			lotto_com[count] = r.nextInt(45) + 1;
-			//count보다 작은 만큼 반복
-			same = true;
-			for(int i = 0; i < count-1; i++) {
-				//같으면
-				if(lotto_com[count] == lotto_com[i]) {
-					//same = false break
-					same = false;
-					break;
-				}
-			}
+			
+			s_count = ifSame(lotto_com);
+			
 			//만약 same = true 이면
-			if(same == true)
+			if(s_count == 0)
 				//count++;
 				count++;
 		}
@@ -60,22 +54,16 @@ public class winLottery {
 			System.out.printf("원하는 %d번째 로또 숫자를 입력하세요", count+1);
 			lotto_user[count] = s.nextInt();
 			if((lotto_user[count] > 45)||(lotto_user[count] < 1))
-				same = false;
-			//count-1번 반복
-			for(int i = 0; i < count; i++) {
-				//같은지 비교해서 같으면
-				if(lotto_user[count] == lotto_user[i]) {
-					//false
-					same = false;
-					break;
-				}
-			}
-			//same이 false이면
-			if(same == false) {
+				s_count= 1;
+			
+			s_count = ifSame(lotto_user);
+			
+			//same이 1이면
+			if(s_count == 1) {
 				//잘못입력
 				System.out.println("=> 잘못 입력하셨습니다.");
 				//다시 true로 바꿔주기
-				same = true;
+				s_count = 0;
 			}
 			//same이 true이면
 			else
@@ -84,6 +72,18 @@ public class winLottery {
 		}	
 	}
 	
+	int ifSame(int array[]) {
+		int same = 0;
+		for(int i = 0; i < count; i++) {
+			//같은지 비교해서 같으면
+			if(array[count] == array[i]) {
+				//false
+				same = 1;
+				break;
+			}
+		}
+		return same;
+	}
 	
 	//몇개가 같은지 출력
 	int printSame() {

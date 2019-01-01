@@ -54,7 +54,6 @@ public class StepHManager {
 				break;
 			case 8:
 				changeString cs = new changeString();
-				cs.printChangeStr();
 				break;
 			case 9:
 				userInfo ui = new userInfo();
