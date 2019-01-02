@@ -3,9 +3,9 @@ package workbook.StepI;
 import java.util.Scanner;
 
 public class TheMenu {
+	final static int sale[] = {15000,10000,7000,2000};
 	private int order;
 	private int total = 0;
-	private int sale[] = {15000,10000,7000,2000};
 	public TheMenu () {
 		input();
 	}
