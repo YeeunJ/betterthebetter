@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 import workbook.StepA.StepAManager;
@@ -16,7 +17,7 @@ import workbook.StepM.StepMManager;
 
 public class WBManager {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		@SuppressWarnings("resource")
 		Scanner s = new Scanner(System.in);
