@@ -31,7 +31,7 @@ public class restaurant {
 		while(menu != 4) {
 			Scanner s = new Scanner(System.in);
 			System.out.println("----------------------------------------------------------------------");
-			System.out.printf("1)주문2)결제 3)리스트 4)종료 ==> ");
+			System.out.printf("1)주문 2)결제 3)리스트 4)종료 ==> ");
 			menu = s.nextInt();
 			System.out.println("----------------------------------------------------------------------");
 			//반복하면서 기능 수행하고

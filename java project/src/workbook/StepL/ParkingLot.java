@@ -62,7 +62,7 @@ public class ParkingLot {
 					list();
 					break;
 				case 5:
-					System.out.printf("주차 가능한 자리는 %d대입니다.\n", num-pl.size());
+					System.out.printf("주차 가능한 자리는 %d대입니다. \n", num-pl.size());
 					break;
 				case 6:
 					System.out.println("종료되었습니다.");

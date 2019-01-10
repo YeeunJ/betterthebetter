@@ -67,7 +67,7 @@ public class MenuPan {
 		Scanner s = new Scanner(System.in);
 		System.out.printf("==> 수정할 번호를 입력하세요 : ");
 		c_num = s.nextInt();
-		System.out.printf("==> 메뉴의 메뉴명, 원산지, 가격을 입력하시오.");
+		System.out.printf("==> 메뉴의 메뉴명, 원산지, 가격을 입력하시오. ");
 		name = s.next();
 		origin = s.next();
 		charge = s.nextInt();

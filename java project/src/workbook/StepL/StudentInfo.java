@@ -66,7 +66,7 @@ public class StudentInfo {
 	void modify() {
 		int m_num;
 		Scanner s = new Scanner(System.in);
-		System.out.printf("==> 수정하실 번호를 입력하세요 :");
+		System.out.printf("==> 수정하실 번호를 입력하세요 : ");
 		m_num = s.nextInt();
 		input();
 		si.set(m_num-1, new StudentInfo(Info));
@@ -79,7 +79,7 @@ public class StudentInfo {
 		Scanner s = new Scanner(System.in);
 		System.out.printf("==> 삭제하실 번호를 입력하세요 :");
 		r_num = s.nextInt();
-		System.out.printf("정말로 삭제하시겠습니까?(Y/N)");
+		System.out.printf("정말로 삭제하시겠습니까?(Y/N) ");
 		really = s.next();
 		if(really.equalsIgnoreCase("Y")) {
 			si.remove(r_num-1);
