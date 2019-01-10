@@ -10,7 +10,7 @@ public class Student {
 	void input() {
 		Scanner s = new Scanner(System.in);
 		System.out.printf("학생의 국어, 영어, 수학점수를 입력하시오 -->");
-		for(int i =0; i<3;i++) {
+		for(int i =0; i<score.length;i++) {
 			score[i] = s.nextInt();
 			total += score[i];
 		}

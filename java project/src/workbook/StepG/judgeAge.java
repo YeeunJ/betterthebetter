@@ -3,7 +3,7 @@ package workbook.StepG;
 import java.util.Scanner;
 public class judgeAge {
 	private int birth_year; // 입력받은 태어난 년도
-	private int age[] = new int[100];
+	private int age[] = new int[10];
 	// 각 사람들의 나이 (최대 100명)
 	private int count[] = new int[6];
 	private String name[] = {"유아", "어린이", "청소년", "청년", "중년", "노년"};
