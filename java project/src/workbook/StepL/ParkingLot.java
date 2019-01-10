@@ -145,10 +145,12 @@ public class ParkingLot {
 		different = nowdate - pastdate;
 		total_d = different/10000*24*60+(different%10000)/100*60 + different%100;
 		System.out.println(total_d);
-		if(total_d % 10 == 0)
+		if(total_d == 0)
+			charge = 0;
+		else if(total_d % 10 == 0)
 			charge = total_d/10*500-500;
 		else
-			charge = total_d/10*500;
+			charge = total_d/10*500+500;
 		System.out.printf("==> 현재 시간은 [%s]이므로 주차금액은 %d원입니다.\n", t.format(now), charge);
 	}
 }
