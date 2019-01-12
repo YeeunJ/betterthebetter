@@ -18,6 +18,7 @@ public class MenuPan {
 	public MenuPan() throws IOException{
 		ask();
 		save();
+		
 	}
 	
 	//어떤 기능을 수행할 것인지 묻는 기능(switch써서 해당하는 함수로 가게끔하기, 계속 반복하고 6누르면 종료)
@@ -104,10 +105,10 @@ public class MenuPan {
 	
 	void save() throws IOException {
 		FileWriter fw = new FileWriter("/Users/jeong-yeeun/git/betterthebetter/java project/src/workbook/StepM/menuInfo.txt");
-		fw.write("메뉴번호	메뉴이름	원산지	1인분가격");
 		for(int i = 0; i < mi.size(); i++) {
-			String data = mi.get(i).name+ mi.get(i).origin+ String.valueOf(mi.get(i).charge);
+			String data = mi.get(i).name + "\t" + mi.get(i).origin + "\t" + String.valueOf(mi.get(i).charge);
 			fw.write(data);
+			fw.write("\n");
 		}
 		fw.close();
 		System.out.println("저장되었습니다.");
